@@ -1,0 +1,57 @@
+\textbf{2)} Utilice la diferenciación implícita para demostrar que una función definida implícitamente por $sen x + cos y = 2y$ tiene un punto crítico siempre que $cos x = 0$. Luego utilice la prueba de la primera o segunda derivada para clasificar estos puntos críticos como máximos o mínimos relativos.
+
+\begin{multicols}{2}
+	\noindent
+	Aplicación de la derivación implícita
+	\begin{align*}
+		sen (x)+cos(y)=                                                   & 2y                                      \\
+		\frac{d}{dx}\left(sen (x)\right)+\frac{d}{dx}\left(cos(y)\right)= & \frac{d}{dx}\left(2y\right)             \\
+		cos (x)+\left(-sen(y)\right)\frac{dy}{dx}=                        & 2\frac{dy}{dx}                          \\
+		\left(-sen(y)\right)\frac{dy}{dx}-2\frac{dy}{dx}=                 & -cos (x)                                \\
+		\frac{dy}{dx}\left(-sen(y)-2\right)=                              & -cos (x)                                \\
+		\frac{dy}{dx}=                                                    & \frac{-cos (x)}{\left(-sen(y)-2\right)} \\
+		\frac{dy}{dx}=                                                    & \frac{-cos (x)}{-\left(sen(y)+2\right)} \\
+		\frac{dy}{dx}=                                                    & \frac{cos (x)}{\left(sen(y)+2\right)}   \\
+	\end{align*}
+	\columnbreak\\
+	Análisis de púntos críticos
+	\begin{align*}
+		\therefore \frac{dy}{dx}= & 0\iff cos(x)=0                                          \\
+		\therefore                & \text{nuestros puntos críticos ocurren en los valores:} \\
+		cos(x)=                   & 0\iff x=\frac{\pi}{2}\pm k\pi, k\in\mathbb{Z}           \\
+	\end{align*}
+\end{multicols}
+\noindent
+Clasificación de los puntos críticos. Para clasificar estos puntos críticos, aplicamos la prueba de la segunda derivada.
+\begin{align*}
+	\frac{d^2y}{dx^2}\left(\frac{cos (x)}{sen(y)+2}\right)= & \frac{(sen(y)+2)\left(-sen(x)\right)-cos(x)\left(cos(y)\frac{dy}{dx}\right)}{\left(sen(y)+2\right)^2}         \\
+	=                                                       & \frac{(sen(y)+2)\left(-sen(x)\right)-cos(x)\cdot cos(y)\cdot\frac{cos(x)}{sen(y)+2}}{\left(sen(y)+2\right)^2} \\
+	=                                                       & \frac{(sen(y)+2)^2\left(-sen(x)\right)-cos^2(x)\cdot cos(y)}{\left(sen(y)+2\right)^3}
+\end{align*}
+Dado que la ecuación $coseno$ es periódica, toma el valor de cero en exactamente estos puntos dentro de su periodo.
+$cos\left(\frac{\pi}{2}\right)=0$ y $cos\left(\frac{3\pi}{2}\right)=0$
+
+Para ver esto más claramente:
+
+Evaluamos los puntos donde $cos(x)=0$
+\begin{align*}
+	\frac{d^2y}{dx^2}\bigg|_{cos (x)=0}= & \frac{(sen(y)+2)^2\left(-sen(x)\right)-cos^2(x)\cdot cos(y)}{\left(sen(y)+2\right)^3} \\
+	=                                          & \frac{(sen(y)+2)^2\left(-sen(x)\right)-0\cdot cos(y)}{\left(sen(y)+2\right)^3}                                     \\
+	=                                          & -\frac{sen(x)}{\left(sen(y)+2\right)}                                          
+\end{align*}
+\vspace{-20px}
+\begin{multicols}{2}
+    Sustutuyendo en $\frac{d^2y}{dx^2}$ para $x=\frac{\pi}{2}$:
+    \noindent
+    \begin{align*}
+        \sin\left(\frac{\pi}{2}\right) = 1 \implies \frac{d^2y}{dx^2} = -\frac{1}{\sin y + 2}
+    \end{align*}
+    \columnbreak\\
+    Sustutuyendo en $\frac{d^2y}{dx^2}$ para $x=\frac{3\pi}{2}$:
+    \begin{align*}
+        \sin\left(\frac{3\pi}{2}\right) = -1 \implies \frac{d^2y}{dx^2} = \frac{1}{\sin y + 2}
+    \end{align*}
+\end{multicols}
+\noindent
+Por lo tanto, para $x = \frac{\pi}{2}+k\pi$ es negativo, lo que implica un \textbf{máximo relativo}.\\
+Para $x = \frac{3\pi}{2}+k\pi$ es positivo, lo que implica un \textbf{mínimo relativo}.
