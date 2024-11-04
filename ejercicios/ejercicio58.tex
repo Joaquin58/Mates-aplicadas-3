@@ -1,80 +1,91 @@
 \chapter*{ANTON-BIVENS-DAVIS 3.6 EJERCICIO 58}
 
 \section*{Problema 58: Verificación de límites que son \\ iguales a $a$}
-
-\subsection*{a)  $\lim_{x \to 0} x^{\frac{\ln(a)}{\ln(1+x)}} = a$}
-S
 \begin{enumerate}
-    \item Primero, reconocemos que es una forma indeterminada $0^0$ cuando $x \to 0$
+    \item[(a)] 
+    Resolver el límite:
+    \[
+    \lim_{x \to 0} \frac{x \ln(a)}{\ln(1 + x)} = a
+    \]
     
-    \item Usamos propiedades de logaritmos:
-    \[\ln(\lim_{x \to 0} x^{\frac{\ln(a)}{\ln(1+x)}}) = \ln(a)\]
+    \textbf{Solución:}
     
-    \item Usamos límites:
-    \[\lim_{x \to 0} \ln(x^{\frac{\ln(a)}{\ln(1+x)}}) = \ln(a)\]
-    
-    \item Usando propiedades de logaritmos:
-    \[\lim_{x \to 0} \frac{\ln(a)}{\ln(1+x)}\ln(x) = \ln(a)\]
-    
-    \item Factorizamos $\ln(a)$:
-    \[\ln(a) \cdot \lim_{x \to 0} \frac{\ln(x)}{\ln(1+x)} = \ln(a)\]
-    
-    \item Para el límite restante:
     \begin{itemize}
-        \item $\frac{\ln(x)}{\ln(1+x)} = 1$
+        \item Primero, reconocemos que al hacer \( x \to 0 \), el límite tiene la forma indeterminada \( \frac{0}{0} \).
+        \item Aplicamos la regla de L'Hôpital derivando numerador y denominador:
+        \[
+        \lim_{x \to 0} \frac{x \ln(a)}{\ln(1 + x)} = \lim_{x \to 0} \frac{\ln(a)}{\frac{1}{1 + x}}.
+        \]
+        \item Simplificando, obtenemos:
+        \[
+        \lim_{x \to 0} \ln(a) \cdot (1 + x) = \ln(a) \cdot 1 = \ln(a).
+        \]
+        \item Finalmente, aplicamos la exponencial para deshacer el logaritmo:
+        \[
+        e^{\ln(a)} = a.
+        \]
     \end{itemize}
     
-    \item Por lo tanto:
-    \[\ln(a) \cdot 1 = \ln(a)\]
+    Por lo tanto, el resultado es:
+    \[
+    \lim_{x \to 0} \frac{x \ln(a)}{\ln(1 + x)} = a.
+    \]
     
-    \item Aplicando $e$ en ambos lados:
-    \[e^{\ln(a)} = a\]
-\end{enumerate}
-
-\subsection*{b)  $\lim_{x \to 1} x^{\frac{\ln(a)}{1+\ln(x)}} = a$}
-
-\begin{enumerate}
-    \item Cuando $x \to 1$, esto se convierte en $1^{\frac{\ln(a)}{1}} = 1^{\ln(a)}$
+    \item[(b)] 
+    Resolver el límite:
+    \[
+    \lim_{x \to 1} \frac{x \ln(a)}{1 + \ln(x)} = a
+    \]
     
-    \item Tomamos $\ln$ en ambos lados:
-    \[\ln(\lim_{x \to 1} x^{\frac{\ln(a)}{1+\ln(x)}}) = \ln(a)\]
+    \textbf{Solución:}
     
-    \item Usando propiedades de límites:
-    \[\lim_{x \to 1} \ln(x^{\frac{\ln(a)}{1+\ln(x)}}) = \ln(a)\]
-    
-    \item Usando propiedades de logaritmos:
-    \[\lim_{x \to 1} \frac{\ln(a)}{1+\ln(x)}\ln(x) = \ln(a)\]
-    
-    \item Cuando $x \to 1$:
     \begin{itemize}
-        \item $\ln(x) \to 0$
-        \item $1+\ln(x) \to 1$
+        \item Cuando \( x \to 1 \), el numerador se convierte en \( \ln(a) \cdot 1 = \ln(a) \) y el denominador en \( 1 + \ln(1) = 1 \).
+        \item Esto nos da:
+        \[
+        \lim_{x \to 1} \frac{\ln(a)}{1} = \ln(a).
+        \]
+        \item Aplicando la exponencial para expresar el resultado en términos de \(a\):
+        \[
+        e^{\ln(a)} = a.
+        \]
     \end{itemize}
     
-    \item Aplicando $e$ en ambos lados:
-    \[e^{\ln(a)} = a\]
-\end{enumerate}
-
-\subsection*{c)  $\lim_{x \to 0} (x + 1)^{\frac{\ln(a)}{x}} = a$}
-
-\begin{enumerate}
-    \item Cuando $x \to 1$, esto se convierte en $1^{\frac{\ln(a)}{1}} = 1^{\ln(a)}$
+    Por lo tanto, el resultado es:
+    \[
+    \lim_{x \to 1} \frac{x \ln(a)}{1 + \ln(x)} = a.
+    \]
     
-    \item Tomamos $\ln$ en ambos lados:
-    \[\ln\left(\lim_{x \to 1} x^{\frac{\ln(a)}{1+\ln(x)}}\right) = \ln(a)\]
+    \item[(c)] 
+    Resolver el límite:
+    \[
+    \lim_{x \to 0} \frac{(x + 1)^{\ln(a)}}{x} = a
+    \]
     
-    \item Usando propiedades de límites:
-    \[\lim_{x \to 1} \ln\left(x^{\frac{\ln(a)}{1+\ln(x)}}\right) = \ln(a)\]
+    \textbf{Solución:}
     
-    \item Usando propiedades de logaritmos:
-    \[\lim_{x \to 1} \frac{\ln(a)}{1+\ln(x)}\ln(x) = \ln(a)\]
-    
-    \item Cuando $x \to 1$:
     \begin{itemize}
-        \item $\ln(x) \to 0$
-        \item $1+\ln(x) \to 1$
+        \item Tomamos el logaritmo natural de ambos lados para simplificar el exponente. Sea \(L\) el límite:
+        \[
+        L = \lim_{x \to 0} \frac{(x + 1)^{\ln(a)}}{x}.
+        \]
+        \item Tomando logaritmo natural en ambos lados:
+        \[
+        \ln(L) = \lim_{x \to 0} \frac{\ln(a) \cdot \ln(x + 1)}{x}.
+        \]
+        \item Observamos que este límite es de la forma \( \frac{0}{0} \) cuando \( x \to 0 \), así que aplicamos L'Hôpital:
+        \[
+        \ln(L) = \lim_{x \to 0} \frac{\ln(a)}{x + 1} = \ln(a).
+        \]
+        \item Finalmente, aplicamos la exponencial para deshacer el logaritmo:
+        \[
+        L = e^{\ln(a)} = a.
+        \]
     \end{itemize}
     
-    \item Aplicando $e$ en ambos lados:
-    \[e^{\ln(a)} = a\]
+    Por lo tanto, el resultado es:
+    \[
+    \lim_{x \to 0} \frac{(x + 1)^{\ln(a)}}{x} = a.
+    \]
+    
 \end{enumerate}
