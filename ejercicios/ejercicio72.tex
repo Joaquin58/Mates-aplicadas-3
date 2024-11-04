@@ -1,0 +1,75 @@
+\chapter*{ANTON-BIVENS-DAVIS 4 (Review Exercises) EJERCICIO 72}
+\textbf{72)} De acuerdo con la Ley de Kepler, los planetas en nuestro Sistema Solar  se mueven en orbitas elípticas alrededor del Sol.\\
+Si el acercamiento más cercano al Sol de un planeta ocurre en el tiempo $t=0$, entonces la distancia $r$ del centro del planeta al centro del Sol en algún tiempo posterior $t$ puede ser determinado por la ecuación:
+\[
+r = a(1-ecos \phi)
+\]
+donde  $a$ es la distancia promedio entre centros, $e$ es una constante postiva que mide la planitud de la orbita elíptica y $\phi$ es la solución a la ecuación de Kepler:
+\[
+\frac{2\pi t}{T} = \phi - e sen\phi
+\]
+en donde $T$ es el tiempo que tarda una orbita completa de el planeta. Calcula la distancia de la Tierra al Sol cuado $T=90$ días (Primero encuetra $\phi$ de la Ecuación de Kepler, y luego usa este valor de $\phi$ para encontrar la distancia. Usa $a = 150 \times 10^{6}$ km) \\
+
+Ya que queremos encontrar  $r$ cuando el tiempo es de 90 días, para esto usaremos la fórmula $r = a(1-ecos \phi)$, nos hace falta el valor de $\phi$, para esto utilizaremos la fórmula $\frac{2\pi t}{T} = \phi - e sen\phi$. Aquí nos vemos en una complicación para hallar el valor de $\phi$, debemos ocupar el método de Newton.
+\begin{align*}
+    \frac{2\pi t}{T} = \phi - e sen\phi \\
+    e sen \phi + \frac{2\pi t}{T} = \phi \\
+     e sen \phi - \phi + \frac{2\pi t}{T} = 0 \\
+\end{align*}
+Sabemos que el Valor de $\frac{2\pi t}{T}$ es una constante en esta ecuación, esta vale aproximadamente $1.54927$. \\
+\newline
+Debemos recordar el Método de Newton:
+\[
+x_{n+1} = x_{n} - \frac{f(x_n)}{f'(x_n)}
+\]
+Ahora derivaremos $e sen \phi - \phi + \frac{2\pi t}{T} = 0$ para poder usar este método, derivaremos respecto a $\phi$.
+\begin{align*}
+    f(\phi) &= e sen \phi - \phi + \frac{2\pi t}{T} \\
+    \frac{d}{d\phi} f(\phi) &= \frac{d}{d\phi} e sen \phi - \phi + \frac{2\pi t}{T} \\
+    f'(\phi) &= e\frac{d}{d\phi} sen \phi - \frac{d}{d\phi} \phi + \frac{d}{d\phi} \frac{2\pi t}{T} \\ 
+    \text{e y $\frac{2\pi t}{T}$ son contantes} \\
+    f'(\phi) &= e cos \phi - 1 \\ 
+\end{align*}
+Ahora tomando como nuestra  primer aproximación de x a $\phi_1 = 1$.\\
+Aplicaremos ahora el Método de Newton para tener una mejor aproximación.\\
+\newline
+Tenemos a $e=0.0167$ y a $\frac{2\pi t}{T}=1.54927$, así:\\
+\begin{align*}
+    f(\phi) &= 0.0167 sen (\phi) - \phi + 1.54927 \\
+    f'(\phi) &= 0.0167 cos (\phi) - 1 \\ 
+\end{align*}
+Con $\phi_1 = 1$
+\begin{align*}
+    \phi_{1+1} &= 1 - \frac{0.0167 sen (1) - 1 + 1.54927}{0.0167 cos (1) - 1} \\
+    \phi_{2} &= 1.568451 \\
+\end{align*}
+Con $\phi_2 = 1.568451$
+\begin{align*}
+    \phi_{2+1} &= 1.568451 - \frac{0.0167 sen (1.568451) - 1.568451 + 1.54927}{0.0167 cos (1.568451) - 1} \\
+    \phi_{3} &= 1.565969 \\
+\end{align*}
+Con $\phi_3 = 1.565969$
+\begin{align*}
+    \phi_{3+1} &= 1.565969 - \frac{0.0167 sen (1.565969) - 1.565969 + 1.54927}{0.0167 cos (1.565969) - 1} \\
+    \phi_{4} &= 1.565969 \\
+\end{align*}
+Esto quiere decir que llegamos a una buena aproximación del valor de $\phi$. \\
+\newline
+Ahora con la información que tenemos podemos dar el valor de $r$ en $t = 90$ días. \\
+Tenemos así:
+\begin{align*}
+    a &= 150 \times 10^{6} \\
+    e &= 0.0167 \\
+    \phi &= 1.565969 \\
+\end{align*}
+Sustituyendo en $r = a(1-ecos \phi)$, tenemos:
+\begin{align*}
+    r &= 150 \times 10^{6} (1 - 0.0167 cos (1.565969)) \\
+    r &= 150 \times 10^{6} (1 - 0.0167 (0.0048273)) \\
+    r &= 150 \times 10^{6} (1 - 0.0167 (0.0048273)) \\
+    r &= 150 \times 10^{6} (1 - 0.00008061) \\
+    r &= 150 \times 10^{6} (0.99991938) \\
+    r &= 149987907.6 \\
+    r &= 149.9879076 \times 10^{6} \\
+\end{align*}
+Así sabemos que la distancia de la Tierra al Sol a los 90 días es aproximadamente de $149.9879076 \times 10^{6}$ metros.
