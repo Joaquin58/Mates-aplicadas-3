@@ -1,0 +1,80 @@
+\chapter*{ANTON-BIVENS-DAVIS 3.6 EJERCICIO 58}
+
+\section*{Problema 58: Verificación de límites que son \\ iguales a $a$}
+
+\subsection*{a)  $\lim_{x \to 0} x^{\frac{\ln(a)}{\ln(1+x)}} = a$}
+S
+\begin{enumerate}
+    \item Primero, reconocemos que es una forma indeterminada $0^0$ cuando $x \to 0$
+    
+    \item Usamos propiedades de logaritmos:
+    \[\ln(\lim_{x \to 0} x^{\frac{\ln(a)}{\ln(1+x)}}) = \ln(a)\]
+    
+    \item Usamos límites:
+    \[\lim_{x \to 0} \ln(x^{\frac{\ln(a)}{\ln(1+x)}}) = \ln(a)\]
+    
+    \item Usando propiedades de logaritmos:
+    \[\lim_{x \to 0} \frac{\ln(a)}{\ln(1+x)}\ln(x) = \ln(a)\]
+    
+    \item Factorizamos $\ln(a)$:
+    \[\ln(a) \cdot \lim_{x \to 0} \frac{\ln(x)}{\ln(1+x)} = \ln(a)\]
+    
+    \item Para el límite restante:
+    \begin{itemize}
+        \item $\frac{\ln(x)}{\ln(1+x)} = 1$
+    \end{itemize}
+    
+    \item Por lo tanto:
+    \[\ln(a) \cdot 1 = \ln(a)\]
+    
+    \item Aplicando $e$ en ambos lados:
+    \[e^{\ln(a)} = a\]
+\end{enumerate}
+
+\subsection*{b)  $\lim_{x \to 1} x^{\frac{\ln(a)}{1+\ln(x)}} = a$}
+
+\begin{enumerate}
+    \item Cuando $x \to 1$, esto se convierte en $1^{\frac{\ln(a)}{1}} = 1^{\ln(a)}$
+    
+    \item Tomamos $\ln$ en ambos lados:
+    \[\ln(\lim_{x \to 1} x^{\frac{\ln(a)}{1+\ln(x)}}) = \ln(a)\]
+    
+    \item Usando propiedades de límites:
+    \[\lim_{x \to 1} \ln(x^{\frac{\ln(a)}{1+\ln(x)}}) = \ln(a)\]
+    
+    \item Usando propiedades de logaritmos:
+    \[\lim_{x \to 1} \frac{\ln(a)}{1+\ln(x)}\ln(x) = \ln(a)\]
+    
+    \item Cuando $x \to 1$:
+    \begin{itemize}
+        \item $\ln(x) \to 0$
+        \item $1+\ln(x) \to 1$
+    \end{itemize}
+    
+    \item Aplicando $e$ en ambos lados:
+    \[e^{\ln(a)} = a\]
+\end{enumerate}
+
+\subsection*{c)  $\lim_{x \to 0} (x + 1)^{\frac{\ln(a)}{x}} = a$}
+
+\begin{enumerate}
+    \item Cuando $x \to 1$, esto se convierte en $1^{\frac{\ln(a)}{1}} = 1^{\ln(a)}$
+    
+    \item Tomamos $\ln$ en ambos lados:
+    \[\ln\left(\lim_{x \to 1} x^{\frac{\ln(a)}{1+\ln(x)}}\right) = \ln(a)\]
+    
+    \item Usando propiedades de límites:
+    \[\lim_{x \to 1} \ln\left(x^{\frac{\ln(a)}{1+\ln(x)}}\right) = \ln(a)\]
+    
+    \item Usando propiedades de logaritmos:
+    \[\lim_{x \to 1} \frac{\ln(a)}{1+\ln(x)}\ln(x) = \ln(a)\]
+    
+    \item Cuando $x \to 1$:
+    \begin{itemize}
+        \item $\ln(x) \to 0$
+        \item $1+\ln(x) \to 1$
+    \end{itemize}
+    
+    \item Aplicando $e$ en ambos lados:
+    \[e^{\ln(a)} = a\]
+\end{enumerate}
